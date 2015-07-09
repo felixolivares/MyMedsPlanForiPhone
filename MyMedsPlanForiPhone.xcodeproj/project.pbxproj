@@ -14,6 +14,10 @@
 		301A4D8C1B3B2317003F972C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301A4D8A1B3B2317003F972C /* LaunchScreen.storyboard */; };
 		301A4D971B3B2317003F972C /* MyMedsPlanForiPhoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A4D961B3B2317003F972C /* MyMedsPlanForiPhoneTests.swift */; };
 		301A4DA21B3B2318003F972C /* MyMedsPlanForiPhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A4DA11B3B2318003F972C /* MyMedsPlanForiPhoneUITests.swift */; };
+		302CA55D1B4D9FD4005F4286 /* PlanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302CA55C1B4D9FD4005F4286 /* PlanTableViewCell.xib */; };
+		302CA5611B4DD3BC005F4286 /* MZTimerLabel in Resources */ = {isa = PBXBuildFile; fileRef = 302CA5601B4DD3BC005F4286 /* MZTimerLabel */; };
+		30A24E831B45B1B9007596FB /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A24E821B45B1B9007596FB /* PlanTableViewCell.swift */; };
+		30A24E911B45ED22007596FB /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A24E901B45ED22007596FB /* UIColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,11 @@
 		301A4D9D1B3B2318003F972C /* MyMedsPlanForiPhoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMedsPlanForiPhoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		301A4DA11B3B2318003F972C /* MyMedsPlanForiPhoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMedsPlanForiPhoneUITests.swift; sourceTree = "<group>"; };
 		301A4DA31B3B2318003F972C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		302CA55C1B4D9FD4005F4286 /* PlanTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanTableViewCell.xib; sourceTree = "<group>"; };
+		302CA5601B4DD3BC005F4286 /* MZTimerLabel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MZTimerLabel; sourceTree = "<group>"; };
+		30A24E821B45B1B9007596FB /* PlanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
+		30A24E8F1B45EAD2007596FB /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		30A24E901B45ED22007596FB /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +86,8 @@
 		301A4D751B3B2313003F972C = {
 			isa = PBXGroup;
 			children = (
+				30A24E8F1B45EAD2007596FB /* Bridging-Header.h */,
+				30A24E851B45C1EE007596FB /* Libraries */,
 				301A4D801B3B2315003F972C /* MyMedsPlanForiPhone */,
 				301A4D951B3B2317003F972C /* MyMedsPlanForiPhoneTests */,
 				301A4DA01B3B2318003F972C /* MyMedsPlanForiPhoneUITests */,
@@ -99,10 +110,12 @@
 			children = (
 				301A4D811B3B2316003F972C /* AppDelegate.swift */,
 				301A4D831B3B2316003F972C /* ViewController.swift */,
+				302CA55C1B4D9FD4005F4286 /* PlanTableViewCell.xib */,
 				301A4D851B3B2316003F972C /* Main.storyboard */,
 				301A4D881B3B2317003F972C /* Assets.xcassets */,
 				301A4D8A1B3B2317003F972C /* LaunchScreen.storyboard */,
 				301A4D8D1B3B2317003F972C /* Info.plist */,
+				30A24E821B45B1B9007596FB /* PlanTableViewCell.swift */,
 			);
 			path = MyMedsPlanForiPhone;
 			sourceTree = "<group>";
@@ -123,6 +136,15 @@
 				301A4DA31B3B2318003F972C /* Info.plist */,
 			);
 			path = MyMedsPlanForiPhoneUITests;
+			sourceTree = "<group>";
+		};
+		30A24E851B45C1EE007596FB /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				302CA5601B4DD3BC005F4286 /* MZTimerLabel */,
+				30A24E901B45ED22007596FB /* UIColorExtensions.swift */,
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +209,7 @@
 		301A4D761B3B2314003F972C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Felix Olivares";
 				TargetAttributes = {
@@ -228,9 +251,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				302CA55D1B4D9FD4005F4286 /* PlanTableViewCell.xib in Resources */,
 				301A4D8C1B3B2317003F972C /* LaunchScreen.storyboard in Resources */,
 				301A4D891B3B2317003F972C /* Assets.xcassets in Resources */,
 				301A4D871B3B2316003F972C /* Main.storyboard in Resources */,
+				302CA5611B4DD3BC005F4286 /* MZTimerLabel in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				301A4D841B3B2316003F972C /* ViewController.swift in Sources */,
+				30A24E831B45B1B9007596FB /* PlanTableViewCell.swift in Sources */,
 				301A4D821B3B2316003F972C /* AppDelegate.swift in Sources */,
+				30A24E911B45ED22007596FB /* UIColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +360,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -351,6 +379,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/felixolivares/Documents/MyMedsPlanForiPhone/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -377,6 +406,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -388,6 +418,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/felixolivares/Documents/MyMedsPlanForiPhone/Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -396,10 +427,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jesus De Meyer (FA5NCMKJ2Q)";
 				INFOPLIST_FILE = MyMedsPlanForiPhone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.foe.MyMedsPlanForiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -407,10 +442,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jesus De Meyer (FA5NCMKJ2Q)";
 				INFOPLIST_FILE = MyMedsPlanForiPhone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.foe.MyMedsPlanForiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -481,6 +519,7 @@
 				301A4DA81B3B2318003F972C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		301A4DA91B3B2318003F972C /* Build configuration list for PBXNativeTarget "MyMedsPlanForiPhoneTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +528,7 @@
 				301A4DAB1B3B2318003F972C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		301A4DAC1B3B2318003F972C /* Build configuration list for PBXNativeTarget "MyMedsPlanForiPhoneUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +537,7 @@
 				301A4DAE1B3B2318003F972C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
