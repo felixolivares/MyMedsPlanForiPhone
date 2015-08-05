@@ -33,7 +33,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         print(self.items[indexPath.row])
         cell.nameLabel.text = self.items[indexPath.row]
-        
+        cell.myTimer = String(format: "myTimer%d", indexPath.row)
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         return cell
     }
     
@@ -46,7 +47,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100;
+        return 130;
     }
 
     

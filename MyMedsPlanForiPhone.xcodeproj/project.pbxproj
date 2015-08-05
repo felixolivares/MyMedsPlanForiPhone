@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30087A1A1B5D7E7300BA6839 /* SFlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30087A191B5D7E7300BA6839 /* SFlatButton.swift */; };
+		30087A251B5D81FD00BA6839 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 30087A1D1B5D81FD00BA6839 /* ALView+PureLayout.m */; };
+		30087A261B5D81FD00BA6839 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 30087A1F1B5D81FD00BA6839 /* NSArray+PureLayout.m */; };
+		30087A271B5D81FD00BA6839 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 30087A211B5D81FD00BA6839 /* NSLayoutConstraint+PureLayout.m */; };
 		301A4D821B3B2316003F972C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A4D811B3B2316003F972C /* AppDelegate.swift */; };
 		301A4D841B3B2316003F972C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A4D831B3B2316003F972C /* ViewController.swift */; };
 		301A4D871B3B2316003F972C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301A4D851B3B2316003F972C /* Main.storyboard */; };
@@ -15,9 +19,12 @@
 		301A4D971B3B2317003F972C /* MyMedsPlanForiPhoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A4D961B3B2317003F972C /* MyMedsPlanForiPhoneTests.swift */; };
 		301A4DA21B3B2318003F972C /* MyMedsPlanForiPhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A4DA11B3B2318003F972C /* MyMedsPlanForiPhoneUITests.swift */; };
 		302CA55D1B4D9FD4005F4286 /* PlanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302CA55C1B4D9FD4005F4286 /* PlanTableViewCell.xib */; };
-		302CA5611B4DD3BC005F4286 /* MZTimerLabel in Resources */ = {isa = PBXBuildFile; fileRef = 302CA5601B4DD3BC005F4286 /* MZTimerLabel */; };
 		30A24E831B45B1B9007596FB /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A24E821B45B1B9007596FB /* PlanTableViewCell.swift */; };
 		30A24E911B45ED22007596FB /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A24E901B45ED22007596FB /* UIColorExtensions.swift */; };
+		30ABA5151B4ED5F3001B6201 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 30ABA5141B4ED5F3001B6201 /* File.m */; };
+		30ABA5261B4EE750001B6201 /* ZGCountDownTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 30ABA5251B4EE750001B6201 /* ZGCountDownTimer.m */; };
+		30E2F9021B72A400002D94A4 /* My_Meds_Plan_Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30E2F9001B72A400002D94A4 /* My_Meds_Plan_Model.xcdatamodeld */; };
+		B2C9561A4AAE4CBA8389B7CD /* Pods_MyMedsPlanForiPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6710645CF5ECA2B480BD3D35 /* Pods_MyMedsPlanForiPhone.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +45,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30087A191B5D7E7300BA6839 /* SFlatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SFlatButton.swift; path = MyMedsPlanForiPhone/SFlatButton/SFlatButton.swift; sourceTree = "<group>"; };
+		30087A1C1B5D81FD00BA6839 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "MyMedsPlanForiPhone/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
+		30087A1D1B5D81FD00BA6839 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "MyMedsPlanForiPhone/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
+		30087A1E1B5D81FD00BA6839 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "MyMedsPlanForiPhone/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		30087A1F1B5D81FD00BA6839 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "MyMedsPlanForiPhone/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		30087A201B5D81FD00BA6839 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "MyMedsPlanForiPhone/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		30087A211B5D81FD00BA6839 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "MyMedsPlanForiPhone/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		30087A221B5D81FD00BA6839 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = MyMedsPlanForiPhone/PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		30087A231B5D81FD00BA6839 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "MyMedsPlanForiPhone/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
+		30087A241B5D81FD00BA6839 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = MyMedsPlanForiPhone/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
 		301A4D7E1B3B2315003F972C /* MyMedsPlanForiPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMedsPlanForiPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		301A4D811B3B2316003F972C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		301A4D831B3B2316003F972C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,10 +69,16 @@
 		301A4DA11B3B2318003F972C /* MyMedsPlanForiPhoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMedsPlanForiPhoneUITests.swift; sourceTree = "<group>"; };
 		301A4DA31B3B2318003F972C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		302CA55C1B4D9FD4005F4286 /* PlanTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanTableViewCell.xib; sourceTree = "<group>"; };
-		302CA5601B4DD3BC005F4286 /* MZTimerLabel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MZTimerLabel; sourceTree = "<group>"; };
 		30A24E821B45B1B9007596FB /* PlanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
-		30A24E8F1B45EAD2007596FB /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		30A24E901B45ED22007596FB /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		30ABA5141B4ED5F3001B6201 /* File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = File.m; sourceTree = "<group>"; };
+		30ABA51A1B4EDE62001B6201 /* MyMedsPlanForiPhone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyMedsPlanForiPhone-Bridging-Header.h"; sourceTree = "<group>"; };
+		30ABA5241B4EE750001B6201 /* ZGCountDownTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZGCountDownTimer.h; path = MyMedsPlanForiPhone/ZGCountDownTimer/ZGCountDownTimer.h; sourceTree = "<group>"; };
+		30ABA5251B4EE750001B6201 /* ZGCountDownTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZGCountDownTimer.m; path = MyMedsPlanForiPhone/ZGCountDownTimer/ZGCountDownTimer.m; sourceTree = "<group>"; };
+		30E2F9011B72A400002D94A4 /* My_Meds_Plan_Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = My_Meds_Plan_Model.xcdatamodel; sourceTree = "<group>"; };
+		6710645CF5ECA2B480BD3D35 /* Pods_MyMedsPlanForiPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMedsPlanForiPhone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAA47B9F3CFBC91AAEA6BE23 /* Pods-MyMedsPlanForiPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMedsPlanForiPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMedsPlanForiPhone/Pods-MyMedsPlanForiPhone.debug.xcconfig"; sourceTree = "<group>"; };
+		BD360B8F84FC3B9F53EC9278 /* Pods-MyMedsPlanForiPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMedsPlanForiPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMedsPlanForiPhone/Pods-MyMedsPlanForiPhone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C9561A4AAE4CBA8389B7CD /* Pods_MyMedsPlanForiPhone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,15 +107,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FBE87722113D0590D9D180A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6710645CF5ECA2B480BD3D35 /* Pods_MyMedsPlanForiPhone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30087A181B5D7E6200BA6839 /* SFlatButton */ = {
+			isa = PBXGroup;
+			children = (
+				30087A191B5D7E7300BA6839 /* SFlatButton.swift */,
+			);
+			name = SFlatButton;
+			sourceTree = "<group>";
+		};
+		30087A1B1B5D81ED00BA6839 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				30087A1C1B5D81FD00BA6839 /* ALView+PureLayout.h */,
+				30087A1D1B5D81FD00BA6839 /* ALView+PureLayout.m */,
+				30087A1E1B5D81FD00BA6839 /* NSArray+PureLayout.h */,
+				30087A1F1B5D81FD00BA6839 /* NSArray+PureLayout.m */,
+				30087A201B5D81FD00BA6839 /* NSLayoutConstraint+PureLayout.h */,
+				30087A211B5D81FD00BA6839 /* NSLayoutConstraint+PureLayout.m */,
+				30087A221B5D81FD00BA6839 /* PureLayout.h */,
+				30087A231B5D81FD00BA6839 /* PureLayout+Internal.h */,
+				30087A241B5D81FD00BA6839 /* PureLayoutDefines.h */,
+			);
+			name = PureLayout;
+			sourceTree = "<group>";
+		};
 		301A4D751B3B2313003F972C = {
 			isa = PBXGroup;
 			children = (
-				30A24E8F1B45EAD2007596FB /* Bridging-Header.h */,
-				30A24E851B45C1EE007596FB /* Libraries */,
 				301A4D801B3B2315003F972C /* MyMedsPlanForiPhone */,
 				301A4D951B3B2317003F972C /* MyMedsPlanForiPhoneTests */,
 				301A4DA01B3B2318003F972C /* MyMedsPlanForiPhoneUITests */,
 				301A4D7F1B3B2315003F972C /* Products */,
+				C1CCBB931768DD49A202342A /* Pods */,
+				0FBE87722113D0590D9D180A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,7 +164,9 @@
 		301A4D801B3B2315003F972C /* MyMedsPlanForiPhone */ = {
 			isa = PBXGroup;
 			children = (
+				30A24E851B45C1EE007596FB /* Libraries */,
 				301A4D811B3B2316003F972C /* AppDelegate.swift */,
+				30E2F9001B72A400002D94A4 /* My_Meds_Plan_Model.xcdatamodeld */,
 				301A4D831B3B2316003F972C /* ViewController.swift */,
 				302CA55C1B4D9FD4005F4286 /* PlanTableViewCell.xib */,
 				301A4D851B3B2316003F972C /* Main.storyboard */,
@@ -116,6 +174,8 @@
 				301A4D8A1B3B2317003F972C /* LaunchScreen.storyboard */,
 				301A4D8D1B3B2317003F972C /* Info.plist */,
 				30A24E821B45B1B9007596FB /* PlanTableViewCell.swift */,
+				30ABA5141B4ED5F3001B6201 /* File.m */,
+				30ABA51A1B4EDE62001B6201 /* MyMedsPlanForiPhone-Bridging-Header.h */,
 			);
 			path = MyMedsPlanForiPhone;
 			sourceTree = "<group>";
@@ -141,10 +201,31 @@
 		30A24E851B45C1EE007596FB /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				302CA5601B4DD3BC005F4286 /* MZTimerLabel */,
+				30087A1B1B5D81ED00BA6839 /* PureLayout */,
+				30087A181B5D7E6200BA6839 /* SFlatButton */,
+				30ABA5231B4EE73D001B6201 /* ZGCountDownTimer */,
 				30A24E901B45ED22007596FB /* UIColorExtensions.swift */,
 			);
 			name = Libraries;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		30ABA5231B4EE73D001B6201 /* ZGCountDownTimer */ = {
+			isa = PBXGroup;
+			children = (
+				30ABA5241B4EE750001B6201 /* ZGCountDownTimer.h */,
+				30ABA5251B4EE750001B6201 /* ZGCountDownTimer.m */,
+			);
+			name = ZGCountDownTimer;
+			sourceTree = "<group>";
+		};
+		C1CCBB931768DD49A202342A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAA47B9F3CFBC91AAEA6BE23 /* Pods-MyMedsPlanForiPhone.debug.xcconfig */,
+				BD360B8F84FC3B9F53EC9278 /* Pods-MyMedsPlanForiPhone.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 301A4DA61B3B2318003F972C /* Build configuration list for PBXNativeTarget "MyMedsPlanForiPhone" */;
 			buildPhases = (
+				B8EF8F26A36E9D09ED394473 /* Check Pods Manifest.lock */,
 				301A4D7A1B3B2315003F972C /* Sources */,
 				301A4D7B1B3B2315003F972C /* Frameworks */,
 				301A4D7C1B3B2315003F972C /* Resources */,
+				E976FC54E7FE2280D55A063A /* Embed Pods Frameworks */,
+				12EA23B6DAC9921FA2F09877 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,6 +299,7 @@
 				TargetAttributes = {
 					301A4D7D1B3B2315003F972C = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = BN4CS6JZ8K;
 					};
 					301A4D911B3B2317003F972C = {
 						CreatedOnToolsVersion = 7.0;
@@ -255,7 +340,6 @@
 				301A4D8C1B3B2317003F972C /* LaunchScreen.storyboard in Resources */,
 				301A4D891B3B2317003F972C /* Assets.xcassets in Resources */,
 				301A4D871B3B2316003F972C /* Main.storyboard in Resources */,
-				302CA5611B4DD3BC005F4286 /* MZTimerLabel in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,14 +359,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12EA23B6DAC9921FA2F09877 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMedsPlanForiPhone/Pods-MyMedsPlanForiPhone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8EF8F26A36E9D09ED394473 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E976FC54E7FE2280D55A063A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMedsPlanForiPhone/Pods-MyMedsPlanForiPhone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		301A4D7A1B3B2315003F972C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30ABA5151B4ED5F3001B6201 /* File.m in Sources */,
+				30087A271B5D81FD00BA6839 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				301A4D841B3B2316003F972C /* ViewController.swift in Sources */,
+				30ABA5261B4EE750001B6201 /* ZGCountDownTimer.m in Sources */,
+				30087A251B5D81FD00BA6839 /* ALView+PureLayout.m in Sources */,
 				30A24E831B45B1B9007596FB /* PlanTableViewCell.swift in Sources */,
 				301A4D821B3B2316003F972C /* AppDelegate.swift in Sources */,
+				30087A1A1B5D7E7300BA6839 /* SFlatButton.swift in Sources */,
+				30E2F9021B72A400002D94A4 /* My_Meds_Plan_Model.xcdatamodeld in Sources */,
+				30087A261B5D81FD00BA6839 /* NSArray+PureLayout.m in Sources */,
 				30A24E911B45ED22007596FB /* UIColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +494,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jesus De Meyer (FA5NCMKJ2Q)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -379,7 +519,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/felixolivares/Documents/MyMedsPlanForiPhone/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -401,6 +541,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jesus De Meyer (FA5NCMKJ2Q)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -418,13 +559,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/felixolivares/Documents/MyMedsPlanForiPhone/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		301A4DA71B3B2318003F972C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAA47B9F3CFBC91AAEA6BE23 /* Pods-MyMedsPlanForiPhone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -433,13 +575,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.foe.MyMedsPlanForiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyMedsPlanForiPhone/MyMedsPlanForiPhone-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		301A4DA81B3B2318003F972C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD360B8F84FC3B9F53EC9278 /* Pods-MyMedsPlanForiPhone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -448,7 +591,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.foe.MyMedsPlanForiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyMedsPlanForiPhone/MyMedsPlanForiPhone-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -479,6 +622,7 @@
 		301A4DAD1B3B2318003F972C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = MyMedsPlanForiPhoneUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.foe.MyMedsPlanForiPhoneUITests;
@@ -491,6 +635,7 @@
 		301A4DAE1B3B2318003F972C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = MyMedsPlanForiPhoneUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.foe.MyMedsPlanForiPhoneUITests;
@@ -540,6 +685,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		30E2F9001B72A400002D94A4 /* My_Meds_Plan_Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				30E2F9011B72A400002D94A4 /* My_Meds_Plan_Model.xcdatamodel */,
+			);
+			currentVersion = 30E2F9011B72A400002D94A4 /* My_Meds_Plan_Model.xcdatamodel */;
+			path = My_Meds_Plan_Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 301A4D761B3B2314003F972C /* Project object */;
 }

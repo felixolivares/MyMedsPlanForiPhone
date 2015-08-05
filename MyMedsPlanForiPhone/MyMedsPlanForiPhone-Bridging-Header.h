@@ -9,5 +9,6 @@
 #ifndef MyMedsPlanForiPhone_Bridging_Header_h
 #define MyMedsPlanForiPhone_Bridging_Header_h
 
-
+#import "ZGCountDownTimer.h"
+#import "PureLayout.h"
 #endif /* MyMedsPlanForiPhone_Bridging_Header_h */
