@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class AddMedicineViewController: UIViewController {
 
+    @IBOutlet weak var medcineNameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,4 +35,26 @@ class AddMedicineViewController: UIViewController {
     }
     */
 
+    @IBAction func saveAction(sender: AnyObject) {
+        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context:NSManagedObjectContext = appDel.managedObjectContext
+        
+        let ent = NSEntityDescription.entityForName("Plan", inManagedObjectContext: context)
+        
+        let newPlan = Plan(entity: ent!, insertIntoManagedObjectContext: context)
+        
+        newPlan.medicineName = medcineNameTextField.text;
+        
+        do{
+            try context.save()
+            print("Context saved")
+            print(newPlan)
+            
+        }catch{
+            
+        }
+        
+        
+        
+    }
 }

@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8118.17" systemVersion="14D131" minimumToolsVersion="Xcode 7.0">
-    <entity name="Plan" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Plan" representedClassName="Plan" syncable="YES">
+        <attribute name="additionalInfo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medicineKind" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medicineName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="otherUser" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="periodicity" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="unitsPerDose" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Plan" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="Plan" positionX="-63" positionY="-18" width="128" height="135"/>
     </elements>
 </model>
