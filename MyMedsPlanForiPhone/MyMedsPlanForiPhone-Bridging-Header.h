@@ -11,6 +11,8 @@
 
 #import "ZGCountDownTimer.h"
 #import "PureLayout.h"
-
+#import "BButton.h"
+#import "MagicalRecord.h"
+#import "ActionSheetStringPicker.h"
 
 #endif /* MyMedsPlanForiPhone_Bridging_Header_h */

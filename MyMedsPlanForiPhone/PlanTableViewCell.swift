@@ -15,10 +15,7 @@ class PlanTableViewCell: UITableViewCell, ZGCountDownTimerDelegate {
     @IBOutlet weak var counter: UILabel!
     
     var myCountDownTimer : ZGCountDownTimer = ZGCountDownTimer()
-    
-//    let defaultBtn: SFlatButton = SFlatButton(frame: CGRectMake(227, 76, 80, 35), sfButtonType: SFlatButton.SFlatButtonType.SFBSuccess)
-
-    let btn: SFlatButton = SFlatButton(frame: CGRectMake(1, 1, 80, 35), sfButtonType: SFlatButton.SFlatButtonType.SFBSuccess)
+    var btn : BButton = BButton(frame: CGRectMake(0, 0, 100, 40), type: BButtonType.Success, style: BButtonStyle.BootstrapV3, icon: FAIcon.FATimes, fontSize: 16.0)
     var myTimer : NSString = ""
     
     override func awakeFromNib() {
@@ -32,13 +29,16 @@ class PlanTableViewCell: UITableViewCell, ZGCountDownTimerDelegate {
         self.contentView.addSubview(nameLabel)
         
         
-        btn.setTitle("Default", forState: UIControlState.Normal)
-        self.contentView.addSubview(btn)
         
+        btn.setTitle("Took It", forState: UIControlState.Normal)
+        btn.addAwesomeIcon(FAIcon.FAClockO, beforeTitle: false)
+        btn.addTarget(self, action: "tookMedicineBtbPress", forControlEvents: .TouchUpInside)
+        self.contentView.addSubview(btn)
         
     }
     
     override func layoutSubviews() {
+        print("myTimer: " + (self.myTimer as String))
         self.myCountDownTimer = ZGCountDownTimer(identifier: self.myTimer as String)
         self.myCountDownTimer.delegate = self
         self.myCountDownTimer.setupCountDownForTheFirstTime({ (timer:ZGCountDownTimer!) -> Void in
@@ -50,16 +50,13 @@ class PlanTableViewCell: UITableViewCell, ZGCountDownTimerDelegate {
                     print("timer is running (restore)")
                 }
         })
-        
-        self.myCountDownTimer.startCountDown()
-        
-        }
+    }
     override func updateConstraints() {
         
         btn.autoPinEdge(.Trailing, toEdge: .Trailing, ofView: self.contentView, withOffset: -10)
         btn.autoPinEdge(.Top , toEdge: .Bottom, ofView: counter, withOffset: 20)
         btn.autoSetDimension(.Height , toSize: 35)
-        btn.autoSetDimension(.Width, toSize: 80)
+        btn.autoSetDimension(.Width, toSize: 90)
         
         super.updateConstraints()
     }
@@ -76,5 +73,10 @@ class PlanTableViewCell: UITableViewCell, ZGCountDownTimerDelegate {
     
     func countDownCompleted(sender: ZGCountDownTimer!) {
         print("Completed")
+    }
+    
+    func tookMedicineBtbPress(){
+        print("took medicine press")
+        self.myCountDownTimer.startCountDown()
     }
 }

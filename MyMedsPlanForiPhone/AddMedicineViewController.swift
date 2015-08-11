@@ -9,19 +9,28 @@
 import UIKit
 import CoreData
 
-class AddMedicineViewController: UIViewController {
+class AddMedicineViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var medcineNameTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var unitsPerDoseTextField: UITextField!
 
-        // Do any additional setup after loading the view.
-    }
-
+    @IBOutlet weak var medicineEveryTextField: UITextField!
+    @IBOutlet weak var otherInfoTextView: UITextView!
+    @IBOutlet weak var kindTextField: UITextField!
+    
+    var plans : [Plan]!
+    let hours = ["1","2","3","4","5","6","7","8","9","10","11","12","24",]
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
     }
     
 
@@ -36,25 +45,51 @@ class AddMedicineViewController: UIViewController {
     */
 
     @IBAction func saveAction(sender: AnyObject) {
-        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context:NSManagedObjectContext = appDel.managedObjectContext
+//        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        let context:NSManagedObjectContext = appDel.managedObjectContext
+//        
+//        let ent = NSEntityDescription.entityForName("Plan", inManagedObjectContext: context)
+//        
+//        let newPlan = Plan(entity: ent!, insertIntoManagedObjectContext: context)
+//        if self.plan == nil {
+//            self.plan = Plan.MR_createEntity()
+//        }
         
-        let ent = NSEntityDescription.entityForName("Plan", inManagedObjectContext: context)
+        let plan = Plan.MR_createEntity() as Plan
         
-        let newPlan = Plan(entity: ent!, insertIntoManagedObjectContext: context)
+        plan.medicineName = medcineNameTextField.text;
+        plan.medicineKind = kindTextField.text;
+        plan.additionalInfo = otherInfoTextView.text
+//        newPlan.periodicity = medicineEveryTextField.text
+//        newPlan.unitsPerDose = unitsPerDoseTextField.text
+//        plans.append(plan)
+//        NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
+        self.saveContext()
         
-        newPlan.medicineName = medcineNameTextField.text;
+//        do{
+//            try context.save()
+//            print("Context saved")
+//            print(newPlan)
+//            
+//        }catch{
+//            
+//        }
         
-        do{
-            try context.save()
-            print("Context saved")
-            print(newPlan)
-            
-        }catch{
-            
+    }
+    
+    func saveContext(){
+        (NSManagedObjectContext.MR_defaultContext()).MR_saveToPersistentStoreWithCompletion { (success, error) -> Void in
+            if success{
+                print("You successfully saved your context.")
+                
+            }else if (error != nil) {
+                print("Error saving context: \(error.description)")
+            }
         }
-        
-        
-        
+    }
+    @IBAction func takeMedicineEvery(sender: AnyObject) {
+//        ActionSheetStringPicker.showPickerWithTitle("Select how many hours", rows: hours, initialSelection: 0, doneBlock: { (<#ActionSheetStringPicker!#>, <#Int#>, <#AnyObject!#>) -> Void in
+//            <#code#>
+//            }, cancelBlock: <#T##ActionStringCancelBlock!##ActionStringCancelBlock!##(ActionSheetStringPicker!) -> Void#>, origin: <#T##AnyObject!#>)
     }
 }

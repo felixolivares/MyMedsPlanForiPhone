@@ -13,7 +13,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var mainTableView: UITableView!
     let kPlanCellIdentifier = "PlanCellIdentifier"
-    var items: [String] = ["We", "Heart", "Swift"]
+    var myResults : [Plan]!
+    
+//    var items: [String] = ["We", "Heart", "Swift"]
     let context : NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
     var frc : NSFetchedResultsController = NSFetchedResultsController()
@@ -25,7 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func listFecthRequest() -> NSFetchRequest{
         let fetchRequest = NSFetchRequest (entityName: "Plan")
-        let sortDescriptor = NSSortDescriptor(key: "medicineName", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "medicineName", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         return fetchRequest
     }
@@ -38,6 +40,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let nib = UINib (nibName: "PlanTableViewCell", bundle: nil)
         mainTableView.registerNib(nib, forCellReuseIdentifier: "cell")
         
+        myResults = Plan.MR_findAll() as! [Plan]
+        print("My results fetched : \(myResults[0].medicineName!)")
+        
         frc = getFectchedResultController()
         
         frc.delegate = self
@@ -46,11 +51,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }catch{
             
         }
+        mainTableView.reloadData()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        print("Numero de secciones")
+        print(frc.sections?[0].numberOfObjects)
+        myResults = Plan.MR_findAll() as! [Plan]
+        mainTableView.reloadData()
     }
 
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         mainTableView.reloadData()
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -59,27 +73,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:PlanTableViewCell = self.mainTableView.dequeueReusableCellWithIdentifier("cell") as! PlanTableViewCell
-        
-        print(self.items[indexPath.row])
-        
-        let plan = frc.objectAtIndexPath(indexPath) as! Plan
-        
-        cell.nameLabel.text = plan.medicineName
-        cell.myTimer = String(format: "myTimer%d", indexPath.row)
+        cell.nameLabel.text = myResults[indexPath.row].medicineName!
+        cell.myTimer = "myTimer\(cell.nameLabel.text!)"
+        print("myTimer in main controller" + (cell.myTimer as String))
         cell.selectionStyle = UITableViewCellSelectionStyle.None
-        
-        
         return cell
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        let managedObject : NSManagedObject = frc.objectAtIndexPath(indexPath) as! NSManagedObject
-        context.deleteObject(managedObject)
+        myResults.removeAtIndex(indexPath.row).MR_deleteEntity()
+        self.saveContext()
+        mainTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let numberOfRowsInSection = frc.sections?[section].numberOfObjects
-        return numberOfRowsInSection!
+        return myResults.count
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -90,6 +99,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 130;
     }
 
-    
+    func saveContext(){
+        (NSManagedObjectContext.MR_defaultContext()).MR_saveToPersistentStoreWithCompletion { (success, error) -> Void in
+            if success{
+                print("You successfully saved your context.")
+                
+            }else if (error != nil) {
+                print("Error saving context: \(error.description)")
+            }
+        }
+    }
 }
 
